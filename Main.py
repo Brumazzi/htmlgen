@@ -23,6 +23,8 @@ html.end_page()
 
 # Para retornar a pagina, basta digitar get_page
 print "Pagina criada com HTMLGen"
+print html.get_page_min()
+print "------------------------------------"
 print html.get_page()
 print "------------------------------------"
 
@@ -33,3 +35,6 @@ rout.new_route("pagina_teste.html","html/","pagina")
 print "Pagina recolhida por Route"
 # O apelido será usado para carregar a pagina nesse block
 print rout.call("pagina")
+print "------------------------------------"
+print "Substituindo conteudo!"
+print rout.call("pagina",title_2="Escrevendo no H2")
