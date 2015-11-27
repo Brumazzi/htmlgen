@@ -1,8 +1,6 @@
 #!/usr/bin/env python2
 # *-* coding:utf-8 *-*
 
-__version__ = '1.0.1'
-
 class Route(object):
     __slots__ = ['rfile']
 
@@ -27,11 +25,11 @@ class Route(object):
 
         html = file.read()
         file.close()
-        
+
         for x in vars:
             if html.count("{{"+str(x)+"}}") > 0:
                 html = html.replace("{{%s}}" %(x), vars[x])
             if html.count("{{ "+str(x)+" }}") > 0:
                 html = html.replace("{{ %s }}" %(x), vars[x])
-        
+
         return html
